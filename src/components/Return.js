@@ -19,6 +19,10 @@ const Return = props => {
   const handler = (e) => {
     e.preventDefault();
     data(input)
+    e.target.reset()
+    setInput({
+      input: ''
+    })
   }
 
 
