@@ -32,11 +32,12 @@ const Api = props => {
 
   return (
     <div className="">
-      <div className="text-end my-5">
+      <div className="text-end input my-5">
         <input  
           onChange={e => setInput(e.target.value)}
           value={input}
-          onKeyPress={search} />
+          onKeyPress={search}
+          placeholder="Search" />
         </div>
         <Child weather={weather}/>
     </div>
