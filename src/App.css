@@ -2,6 +2,7 @@ body {
   background-image: url('./img/rainy.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 100vh;
   color: white;
 }
@@ -26,4 +27,9 @@ body {
   border-radius: 10px;
   border: none;
   color: white;
+}
+
+.clear-icon i {
+  font-size: 25px;
+  margin-top: 5px;
 }
