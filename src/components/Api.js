@@ -31,7 +31,7 @@ const Api = props => {
   }
 
   return (
-    <div className="">
+    <div>
       <div className="text-end input my-5">
         <input  
           onChange={e => setInput(e.target.value)}
