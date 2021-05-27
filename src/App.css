@@ -1,8 +1,18 @@
-body {
+.body {
   background-image: url('./img/rainy.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.body1 {
+  background-image: url('./img/cloudy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: center;
   min-height: 100vh;
   color: white;
 }

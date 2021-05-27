@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Houre =({weather}) => {
+  const body = document.querySelector('body')
   return (
     <div>
       {(typeof weather.location != "undefined") ? (
@@ -11,7 +12,7 @@ const Houre =({weather}) => {
             <h2 className="mx-3">{weather.location.country}</h2>
           </div>
           <div className="clear-icon d-flex mx-auto col-4 justify-content-center">
-            <h1 className="mx-2">{weather.current.condition.text}</h1>
+            <h1 className="mx-2">{weather.current.condition.text === 'clowdy' ? body.className = 'body' : body.className = 'body'}</h1>
             <i class="wi wi-night-clear"></i>
           </div>
 
