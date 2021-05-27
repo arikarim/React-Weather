@@ -11,7 +11,7 @@ body {
   position: relative;
   border-radius: 20px;
   text-shadow: 3px 6px rgba(139, 134, 134, 0.973);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(87, 83, 83, 0.5);
 }
 
 .temp-parent .Temp {
@@ -35,5 +35,10 @@ body {
 }
 
 .hours {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
+
+/* .mx-hour {
+  margin-left: 100%;
+} */
