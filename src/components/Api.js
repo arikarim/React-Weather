@@ -39,7 +39,6 @@ const Api = props => {
           onKeyPress={search} />
         </div>
         <Child weather={weather}/>
-        <i class="wi wi-night-sleet"></i>
     </div>
   )
 }

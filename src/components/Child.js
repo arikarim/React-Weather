@@ -11,8 +11,10 @@ const Child = ({weather}) => {
             <h2 className="mx-3">{weather.location.country}</h2>
           </div>
           <div className="my-3 temp-parent text-center col-4 mx-auto">
+            <div className="text-center fs-1">
+              <i class="wi wi-celsius"></i>
+            </div>
             <p className="Temp">{weather.current.temp_c}</p>
-            <i class="wi wi-night-sleet"></i>
           </div>
         </div>
         
