@@ -1,3 +1,18 @@
-.Temp {
-  font-size: 100px
+body {
+  background-image: url('./img/rainy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: white;
+}
+
+.temp-parent {
+  border-radius: 20px;
+  text-shadow: 3px 6px rgba(139, 134, 134, 0.973);
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 130px;
+}
+
+.temp-parent .Temp {
+  color: white;
 }
