@@ -21,18 +21,20 @@ const Daily = ({weather}) => {
   
   return (
     <div>
+      <h1 className="text-center">Check out 24 hour weather forecast</h1>
       {(typeof weather.location != "undefined") ? (
         <div className="my-5">
+          <h2 className="text-center mb-5">{weather.location.name}</h2>
           {weather.forecast.forecastday[0].hour.map((hour, index) => {
             return (
               <div key={index} className="hours my-1 col-6 mx-auto d-flex justify-content-between">
                 <p className="mx-2 py-3">{hour.time.substring(10,20)}</p>
                 <div className="d-flex">
                   <p className="mx-2 py-3">{hour.condition.text}</p>
-                  <p>{condition(hour)}</p>
+                  <p className="my-3">{condition(hour)}</p>
                 </div>
-                <div className="mx-2 py-3 d-flex justify-content-start">
-                  <p className="mx-2">{hour.temp_c}</p>
+                <div className="mx-md-2 py-3 d-flex justify-content-start">
+                  <p className="mx-md-2">{hour.temp_c}</p>
                   <i class="wi wi-celsius"></i>
                 </div>
               </div>
