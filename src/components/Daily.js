@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 const Daily = ({weather}) => {
 
   const condition = hour => {

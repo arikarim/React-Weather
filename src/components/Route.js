@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import Child from './Child'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Houre from './Houre'
 import Daily from './Daily'
 import Nav from './Nav'
+import About from './About'
 const Api = props => {
   const [input, setInput] = useState('')
   const [weather, setWeather] = useState({})
@@ -31,20 +31,18 @@ const Api = props => {
           placeholder="Search" />
         </div>
         <Switch>
-        <Route path='/' exact render={(props) => (
-          <Houre {...props} weather={weather} />
-            )} />
-        <Route path='/hour' exact render={(props) => (
-          <Daily {...props} weather={weather} />
-            )} />
-        <Route path="/hour" weather={weather} component={Daily} />
-      </Switch>
+          <Route path='/' exact render={(props) => (
+            <Houre {...props} weather={weather} />
+              )} />
+          <Route path='/hour' exact render={(props) => (
+            <Daily {...props} weather={weather} />
+              )} />
+          <Route path='/about' exact render={(props) => (
+            <About {...props} />
+              )} />
+        </Switch>
     </BrowserRouter>
   )
-}
-
-Api.propTypes = {
-
 }
 
 export default Api

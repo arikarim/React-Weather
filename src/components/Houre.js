@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 const Houre =({weather}) => {
   const body = document.querySelector('body')
   if (weather.current) {
@@ -57,10 +55,6 @@ const Houre =({weather}) => {
         ) : ('')}
     </div>
   )
-}
-
-Houre.propTypes = {
-
 }
 
 export default Houre
