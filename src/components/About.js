@@ -2,8 +2,11 @@ import React from 'react'
 const About = props => {
   return (
     <div>
-      <h1 >Hello My name is Ari Karim</h1>
-      <div>
+      <h1 >Weather Wide</h1>
+      <div className="about">
+        <h6>Weather Wide is a Weather application built with<span className="span">React, Bootstrap and CSS</span>
+            you can search across the glob or find out your local weather just by typing your city name</h6>
+
         <h4>I'm a full-stack software engineer who specializes in using JavaScript, Ruby on Rails, and React, and I have a passion and love for learning and bringing the best software solutions to businesses.</h4>
       </div>
     </div>
