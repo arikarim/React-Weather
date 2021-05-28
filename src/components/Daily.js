@@ -1,6 +1,26 @@
 import React from 'react'
 const Daily = ({weather}) => {
 
+  const body = document.querySelector('body')
+  if (weather.current) {
+    if (weather.current.condition.text.match(/cloudy/i)) {
+      body.className = ''
+      body.classList.add('cloudy')
+    } else if (weather.current.condition.text.match(/rain/i)) {
+      body.className = ''
+      body.classList.add('rainy')
+    } else if (weather.current.condition.text.match(/snow/i)) {
+      body.className = ''
+      body.classList.add('snowy')
+    } else if (weather.current.condition.text.match(/wind/i)) {
+      body.className = ''
+      body.classList.add('windy')
+    } else if (weather.current.condition.text.match(/sunny/i) || weather.current.condition.text.match(/clear/i)) {
+      body.className = ''
+      body.classList.add('sunny')
+    }
+  }
+  
   const condition = hour => {
     if (hour.condition.text.match(/cloudy/i)) {
      return <i class="wi wi-day-cloudy"></i> 
