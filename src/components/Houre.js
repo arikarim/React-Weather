@@ -3,6 +3,19 @@ import PropTypes from 'prop-types'
 
 const Houre =({weather}) => {
   const body = document.querySelector('body')
+  if (weather.current) {
+    if (weather.current.condition.text.match(/cloudy/i)) {
+      body.classList.add('cloudy')
+    } else if (weather.current.condition.text.match(/rain/i)) {
+      body.classList.add('rainy')
+    } else if (weather.current.condition.text.match(/snow/i)) {
+      body.classList.add('snowy')
+    } else if (weather.current.condition.text.match(/wind/i)) {
+      body.classList.add('windy')
+    } else if (weather.current.condition.text.match(/sunny/i) || weather.current.condition.text.match(/clear/i)) {
+      body.classList.add('sunny')
+    }
+  }
   return (
     <div>
       {(typeof weather.location != "undefined") ? (
@@ -12,7 +25,7 @@ const Houre =({weather}) => {
             <h2 className="mx-3">{weather.location.country}</h2>
           </div>
           <div className="clear-icon d-flex mx-auto col-4 justify-content-center">
-            <h1 className="mx-2">{weather.current.condition.text === 'clowdy' ? body.className = 'body' : body.className = 'body'}</h1>
+            <h1 className="mx-2">{weather.current.condition.text }</h1>
             <i class="wi wi-night-clear"></i>
           </div>
 
