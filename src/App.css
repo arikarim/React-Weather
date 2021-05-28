@@ -52,3 +52,16 @@
 /* .mx-hour {
   margin-left: 100%;
 } */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-li {
+  color: rgb(201, 191, 191);
+}
+
+.active {
+  color: white !important;
+  font-weight: bolder;
+}
