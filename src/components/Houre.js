@@ -5,14 +5,19 @@ const Houre =({weather}) => {
   const body = document.querySelector('body')
   if (weather.current) {
     if (weather.current.condition.text.match(/cloudy/i)) {
+      body.className = ''
       body.classList.add('cloudy')
     } else if (weather.current.condition.text.match(/rain/i)) {
+      body.className = ''
       body.classList.add('rainy')
     } else if (weather.current.condition.text.match(/snow/i)) {
+      body.className = ''
       body.classList.add('snowy')
     } else if (weather.current.condition.text.match(/wind/i)) {
+      body.className = ''
       body.classList.add('windy')
     } else if (weather.current.condition.text.match(/sunny/i) || weather.current.condition.text.match(/clear/i)) {
+      body.className = ''
       body.classList.add('sunny')
     }
   }
@@ -21,11 +26,11 @@ const Houre =({weather}) => {
       {(typeof weather.location != "undefined") ? (
         <div>
           <div className="d-flex justify-content-center">
-            <h2 className="mx-3">{weather.location.name}</h2>
-            <h2 className="mx-3">{weather.location.country}</h2>
+            <h3 className="mx-3">{weather.location.name}</h3>
+            <h3 className="mx-3">{weather.location.country}</h3>
           </div>
           <div className="clear-icon d-flex mx-auto col-4 justify-content-center">
-            <h1 className="mx-2">{weather.current.condition.text }</h1>
+            <h2 className="mx-2">{weather.current.condition.text }</h2>
             <i class="wi wi-night-clear"></i>
           </div>
 

@@ -27,7 +27,7 @@ const Daily = ({weather}) => {
           <h2 className="text-center mb-5">{weather.location.name}</h2>
           {weather.forecast.forecastday[0].hour.map((hour, index) => {
             return (
-              <div key={index} className="hours my-1 col-6 mx-auto d-flex justify-content-between">
+              <div key={index} className="hours my-1 col-10 col-sm-6 mx-auto d-flex justify-content-between">
                 <p className="mx-2 py-3">{hour.time.substring(10,20)}</p>
                 <div className="d-flex">
                   <p className="mx-2 py-3">{hour.condition.text}</p>
