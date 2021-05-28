@@ -3,7 +3,7 @@ import Child from './Child'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Houre from './Houre'
 import Daily from './Daily'
-
+import Nav from './Nav'
 const Api = props => {
   const [input, setInput] = useState('')
   const [weather, setWeather] = useState({})
@@ -22,6 +22,7 @@ const Api = props => {
 
   return (
     <BrowserRouter>
+      <Nav />
       <div className="text-end input my-5">
         <input  
           onChange={e => setInput(e.target.value)}
@@ -39,16 +40,6 @@ const Api = props => {
         <Route path="/hour" weather={weather} component={Daily} />
       </Switch>
     </BrowserRouter>
-    // <div>
-    //   <div className="text-end input my-5">
-    //     <input  
-    //       onChange={e => setInput(e.target.value)}
-    //       value={input}
-    //       onKeyPress={search}
-    //       placeholder="Search" />
-    //     </div>
-    //     <Child weather={weather}/>
-    // </div>
   )
 }
 
