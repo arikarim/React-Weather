@@ -1,22 +1,12 @@
 import React, {useState} from 'react'
-import PropTypes from 'prop-types'
 import Child from './Child'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Houre from './Houre'
+import Daily from './Daily'
 
 const Api = props => {
   const [input, setInput] = useState('')
   const [weather, setWeather] = useState({})
-
-  // const data = async (location) => {
-  //   try {
-  //     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=59fc7f51da5e46f88ae184111212904&q=${location}`, { mode: 'cors' });
-  //     const data = await response.json();
-  //     const test = data;
-  //     console.log(test)
-  //     return test
-  //   } catch {
-  //     return 'sorry...'
-  //   }
-  // }
 
   const search = e => {
     if (e.key === 'Enter') {
@@ -31,7 +21,7 @@ const Api = props => {
   }
 
   return (
-    <div>
+    <BrowserRouter>
       <div className="text-end input my-5">
         <input  
           onChange={e => setInput(e.target.value)}
@@ -39,8 +29,26 @@ const Api = props => {
           onKeyPress={search}
           placeholder="Search" />
         </div>
-        <Child weather={weather}/>
-    </div>
+        <Switch>
+        <Route path='/' exact render={(props) => (
+          <Houre {...props} weather={weather} />
+            )} />
+        <Route path='/hour' exact render={(props) => (
+          <Daily {...props} weather={weather} />
+            )} />
+        <Route path="/hour" weather={weather} component={Daily} />
+      </Switch>
+    </BrowserRouter>
+    // <div>
+    //   <div className="text-end input my-5">
+    //     <input  
+    //       onChange={e => setInput(e.target.value)}
+    //       value={input}
+    //       onKeyPress={search}
+    //       placeholder="Search" />
+    //     </div>
+    //     <Child weather={weather}/>
+    // </div>
   )
 }
 
