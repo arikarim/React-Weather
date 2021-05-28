@@ -27,7 +27,7 @@ const Houre =({weather}) => {
             <h3 className="mx-3">{weather.location.name}</h3>
             <h3 className="mx-3">{weather.location.country}</h3>
           </div>
-          <div className="clear-icon d-flex mx-auto col-4 justify-content-center">
+          <div className="clear-icon d-flex mx-auto col-10 justify-content-center">
             <h2 className="mx-2">{weather.current.condition.text }</h2>
             <i class="wi wi-night-clear"></i>
           </div>
@@ -38,7 +38,7 @@ const Houre =({weather}) => {
               <i class="wi wi-celsius"></i>
             </div>
 
-            <div className="my-6 temp-parent text-center col-8 col-md-4 mx-auto">
+            <div className="my-6 temp-parent text-center col-10 col-md-4 mx-auto">
               <div className="text-center fs-1">
                 <i class="wi wi-celsius"></i>
               </div>
