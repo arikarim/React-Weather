@@ -106,3 +106,17 @@
   color: white !important;
   font-weight: bolder;
 }
+
+.icon-ul {
+
+}
+
+.icons {
+  font-size: 35px;
+  color: black;
+}
+
+.icons a{
+  font-size: 35px;
+  color: rgb(170, 169, 169);
+}
