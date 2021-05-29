@@ -19,6 +19,23 @@ const Houre =({weather}) => {
       body.classList.add('sunny')
     }
   }
+
+  const condition = weather => {
+    if (weather.current.condition.text.match(/cloudy/i)) {
+     return <i class="wi wi-day-cloudy"></i> 
+    } else if (weather.current.condition.text.match(/mist/i)) {
+      return <i class="wi wi-fog"></i> 
+    } else if (weather.current.condition.text.match(/rain/i)) {
+      return <i class="wi wi-rain"></i> 
+    } else if (weather.current.condition.text.match(/rain/i) && (weather.current.condition.text.match(/wind/i))) {
+      return <i class="wi-rain-wind"></i> 
+    }else if (weather.current.condition.text.match(/overcast/i)) {
+      return <i class="wi wi-cloudy"></i> 
+    }else if (weather.current.condition.text.match(/sunny/i) || (weather.current.condition.text.match(/clear/i))) {
+      return <i class="wi wi-day-sunny"></i> 
+    }
+  }
+
   return (
     <div>
       {(typeof weather.location != "undefined") ? (
@@ -29,7 +46,7 @@ const Houre =({weather}) => {
           </div>
           <div className="clear-icon d-flex mx-auto col-10 justify-content-center">
             <h2 className="mx-2">{weather.current.condition.text }</h2>
-            <i class="wi wi-night-clear"></i>
+            {condition(weather)}
           </div>
 
           <div className="my-2 d-md-flex col-12">

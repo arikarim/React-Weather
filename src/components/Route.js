@@ -22,23 +22,20 @@ const Api = props => {
           Sorry, we could not find your location`
         }
       })
-        
-       
-
     }
   }
 
   return (
     <BrowserRouter>
       <Nav />
-      <div className="text-end input my-5">
+      <div className="text-end input mt-5">
         <input  
           onChange={e => setInput(e.target.value)}
           value={input}
           onKeyPress={search}
           placeholder="Search" />
-          <div className="alert"></div>
         </div>
+        <div className="alert"></div>
         <Switch>
           <Route path='/' exact render={(props) => (
             <Houre {...props} weather={weather} />
