@@ -91,6 +91,13 @@
   font-weight: bolder;
 }
 
+.span:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight:900;
+  padding: 5px;
+}
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -111,9 +118,15 @@
   color: black;
 }
 
-.icons a{
+.icons a {
   font-size: 35px;
   color: rgb(170, 169, 169);
+}
+
+.icons a:hover {
+  font-size: 35px;
+  color: white;
+  border-radius: 10px;
 }
 
 .hourly {
