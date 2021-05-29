@@ -9,14 +9,22 @@ const Api = props => {
   const [weather, setWeather] = useState({})
 
   const search = e => {
+    const alert = document.querySelector('.alert')
+    alert.innerHTML ='';
     if (e.key === 'Enter') {
       fetch(`https://api.weatherapi.com/v1/forecast.json?key=59fc7f51da5e46f88ae184111212904&q=${input}`, { mode: 'cors' })
-        .then(res => res.json())
-        .then(result => {
-          setWeather(result);
-          setInput('');
-          console.log(result);
-        });
+      .then(res => res.json())
+      .then(result => {
+        setWeather(result);
+        setInput('');
+        if(result.error) {
+          alert.innerHTML =`
+          Sorry, we could not find your location`
+        }
+      })
+        
+       
+
     }
   }
 
@@ -29,6 +37,7 @@ const Api = props => {
           value={input}
           onKeyPress={search}
           placeholder="Search" />
+          <div className="alert"></div>
         </div>
         <Switch>
           <Route path='/' exact render={(props) => (
