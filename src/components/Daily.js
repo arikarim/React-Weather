@@ -39,7 +39,7 @@ const Daily = ({weather}) => {
   
   return (
     <div>
-      <h1 className="text-center">Check out 24 hour weather forecast</h1>
+      <h1 className="text-center hourly">Check out 24-hour weather forecasting.</h1>
       {(typeof weather.location != "undefined") ? (
         <div className="my-5">
           <h2 className="text-center mb-5">{weather.location.name}</h2>
