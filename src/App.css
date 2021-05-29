@@ -128,3 +128,9 @@
 * {
   font-family: squad-one;
 }
+
+.min-max {
+  background-color: rgba(87, 83, 83, 0.5);
+  border-radius: 10px;
+  padding: 5px 0 5px 0;
+}

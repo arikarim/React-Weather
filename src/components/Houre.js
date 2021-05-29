@@ -50,7 +50,7 @@ const Houre =({weather}) => {
           </div>
 
           <div className="my-2 d-md-flex col-12">
-            <div className="col-3 mx-auto my-3  text-end justify-content-center justify-content-md-end align-self-center d-flex">
+            <div className="min-max col-3 mx-auto my-3  text-end justify-content-center justify-content-md-center align-self-center d-flex">
               Min <p className="my-0 mx-2">{weather.forecast.forecastday[0].day.mintemp_c}</p>
               <i class="wi wi-celsius"></i>
             </div>
@@ -62,7 +62,7 @@ const Houre =({weather}) => {
               <p className="Temp">{weather.current.temp_c}</p>
             </div>
 
-            <div className="col-3 mx-auto my-3 justify-content-center align-self-md-center d-flex">
+            <div className="min-max col-3 mx-auto my-3 justify-content-center align-self-md-center d-flex">
               Max <p className="my-0 mx-2">{weather.forecast.forecastday[0].day.maxtemp_c}</p>
             <i class="wi wi-celsius"></i>
             </div>
