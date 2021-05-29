@@ -25,6 +25,44 @@ const Api = props => {
     }
   }
 
+  function getWeather() {
+    // let temperature = document.getElementById("temperature");
+    // let description = document.getElementById("description");
+    let locationn = document.querySelector('.geolocation');
+  
+    let api = "https://api.weatherapi.com/v1/forecast.json?key=59fc7f51da5e46f88ae184111212904&q=";
+    let apiKey = "59fc7f51da5e46f88ae184111212904";
+
+  
+    navigator.geolocation.getCurrentPosition(success, error);
+  
+    function success(position) {
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude;
+  
+      let url =`
+      ${api}${latitude} ,${longitude} 
+      `
+
+        
+  
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          setWeather(data)
+        });
+    }
+  
+    function error() {
+      return "Unable to retrieve your location";
+    }
+  }
+
+  window.onload = () => {
+    getWeather()
+  }
+
   return (
     <BrowserRouter>
       <Nav />
@@ -36,6 +74,7 @@ const Api = props => {
           placeholder="Search" />
         </div>
         <div className="alert"></div>
+        <div className="geolocation"></div>
         <Switch>
           <Route path='/' exact render={(props) => (
             <Houre {...props} weather={weather} />
