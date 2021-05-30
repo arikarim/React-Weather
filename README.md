@@ -1,6 +1,6 @@
 # Weather-App
 
-Weather Wide is a weather application built with `React, Bootstrap, and CSS`, you can search across the globe or find out your local weather just by typing your city name.<br>
+Weather Wide is a weather application built with `React, CSS, Weather-API, and React-Router`, you can search across the globe or find out your local weather just by typing your city name.<br>
 
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) 
 
