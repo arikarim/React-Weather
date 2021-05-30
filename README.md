@@ -17,7 +17,7 @@ Weather Wide is a weather application built with `React, CSS, Weather-API, and R
 ### About Page
 ![image](./src/img/s3.png)
 
-[Live Demo Link](https://arikarim.github.io/React-Weather/)
+[Live Demo Link](https://arikarim.github.io/Weather-Wide/)
 
 ## Built With
 
