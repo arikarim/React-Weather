@@ -44,7 +44,7 @@ It will clone the repo to your local folder.
 **Step 2**<br>
 - Cd inside the project
 
-- open index.html in your browser.
+- Run `npm run start`
 
 
 ## 🤝 contributing
