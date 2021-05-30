@@ -76,14 +76,14 @@ const Api = props => {
         <div className="alert"></div>
         <div className="geolocation"></div>
         <Switch>
-          <Route path='/weather' exact render={(props) => (
-            <Houre {...props} weather={weather} />
-              )} />
-          <Route path='/hour' exact render={(props) => (
+          <Route path='/hour' render={(props) => (
             <Daily {...props} weather={weather} />
               )} />
-          <Route path='/about' exact render={(props) => (
+          <Route path='/about' render={(props) => (
             <About {...props} />
+              )} />
+          <Route path='/' render={(props) => (
+            <Houre {...props} weather={weather} />
               )} />
         </Switch>
     </BrowserRouter>
