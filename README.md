@@ -37,7 +37,7 @@ To get this project up and running locally, you must follow the steps from the [
 Navigate through the local folder where you want to clone the repository and run: <br>
 
 ```
-git clone https://github.com/arikarim/Weather-App/tree/main 
+git clone https://github.com/arikarim/Weather-Wide 
 ```
 It will clone the repo to your local folder.
 
@@ -49,7 +49,7 @@ It will clone the repo to your local folder.
 
 ## 🤝 contributing
 
-contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](https://github.com/arikarim/Weather-App/issues).
+contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](https://github.com/arikarim/Weather-Wide/issues).
 
 ## Author
 
