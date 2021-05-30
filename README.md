@@ -6,7 +6,7 @@ Weather Wide is a weather application built with `React, Bootstrap, and CSS`, yo
 
 
 
-## Screenshots of the app.
+## Screenshots of the app:
 
 ### Home Page
 ![image](./src/img/s1.png)
