@@ -6,6 +6,7 @@ Weather Wide is a weather application built with `React, CSS, Weather-API, and R
 
 
 
+
 ## Screenshots of the app:
 
 ### Home Page
