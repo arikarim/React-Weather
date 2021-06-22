@@ -27,7 +27,6 @@ Weather Wide is a weather application built with `React, CSS, Weather-API, and R
 - Css
 
 
-
 ## Prerequisities
 
 To get this project up and running locally, you must follow the steps from the [getting started section](#getting-started).
