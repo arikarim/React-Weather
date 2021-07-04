@@ -5,8 +5,6 @@ Weather Wide is a weather application built with `React, CSS, Weather-API, and R
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) 
 
 
-
-
 ## Screenshots of the app:
 
 ### Home Page
